@@ -2,6 +2,11 @@ var ViewModel = function() {
   this.catName = ko.observable("John");
   this.catUrl = ko.observable("https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg");
   this.catCount = ko.observable(0);
+  this.nickNames = ko.observableArray([
+    {catName: "pussy"},
+    {catName: "doddy"},
+    {catName: "haha"}
+  ])
   this.catLevel = ko.computed(function(){
     if(this.catCount()==3){
       return "infant";
