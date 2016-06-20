@@ -6,13 +6,13 @@
 </head>
 <body>
     <ul id="cat-list"></ul>
-    <div id="cat">
+    <div id="cat" data-bind="with: catModel">
 
-        <h2 id="cat-name" data-bind = text:catModel().catName></h2>
-        <div id="cat-count" data-bind = text:catModel().catCount></div>
-        <h2 data-bind= text:catModel().catLevel></h2>
-        <img width="300px" id="cat-img" src="" alt="cute cat" data-bind = attr:{src:catModel().catUrl},click:catClick>
-        <ul data-bind="foreach: catModel().nickNames">
+        <h2 id="cat-name" data-bind = text:catName></h2>
+        <div id="cat-count" data-bind = text:catCount></div>
+        <h2 data-bind= text:catLevel></h2>
+        <img width="300px" id="cat-img" src="" alt="cute cat" data-bind = attr:{src:catUrl},click:$parent.catClick>
+        <ul data-bind="foreach: nickNames">
           <li data-bind="text: catName"></li>
         </ul>
     </div>

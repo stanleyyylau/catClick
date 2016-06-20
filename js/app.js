@@ -1,8 +1,9 @@
 var ViewModel = function() {
-    this.catModel = ko.observable(new Model());
-    this.catClick = function() {
+    var self=this;
+    self.catModel = ko.observable(new Model());
+    self.catClick = function() {
         alert("test");
-        this.catModel().catCount(this.catModel().catCount() + 1);
+        self.catModel().catCount(self.catModel().catCount() + 1);
     };
 };
 
